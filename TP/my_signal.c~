@@ -1,0 +1,18 @@
+#include <signal.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+
+void catch_sighup(int signal)
+{
+  printf("signal : %d\n", signal);
+  printf("prosper youpla boum! c'est le roid u pain dépice!\n");
+}
+int	main(void)
+{
+  printf("pid : %d\n", getpid());
+  signal(SIGHUP, catch_sighup);
+  sleep(120);
+  printf("end.\n");
+  return (0);
+}

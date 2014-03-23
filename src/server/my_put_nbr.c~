@@ -1,0 +1,34 @@
+/*
+** my_put_nbr.c for my_put_nbr in /home/exposi_p/rendu/Piscine-C-Jour_03
+** 
+** Made by exposi_p
+** Login   <exposi_p@epitech.net>
+** 
+** Started on  Wed Oct  2 23:37:32 2013 exposi_p
+** Last update Wed Oct  2 23:37:33 2013 exposi_p
+*/
+
+int	my_put_nbr(int nb)
+{
+  int	div;
+
+  div = -1;
+  if (nb < 0)
+    { 
+      my_putchar('-');
+    }
+  else
+    {
+      nb = -nb;
+    }
+  while ((nb / -div) <= -10)
+    {
+      div = div * 10;
+    }
+  while (div < 0)
+    {
+      my_putchar((nb / div) + '0');
+      nb = nb % div;
+      div = div / 10;
+    }
+}

@@ -1,0 +1,19 @@
+/*
+** my_power_rec.c for minitalk in /home/exposi_p/rendu/PSU_2013_minitalk
+** 
+** Made by exposi_p
+** Login   <exposi_p@epitech.net>
+** 
+** Started on  Sat Mar 22 09:47:16 2014 exposi_p
+** Last update Sat Mar 22 09:47:16 2014 exposi_p
+*/
+
+int	my_power_rec(int nb, int power)
+{
+  if (power == 0 || nb == 0)
+    return (1);
+  if (power < 0)
+    return (0);
+  else
+    return (nb * my_power_rec(nb, power -1));
+}

@@ -1,0 +1,26 @@
+/*
+** xmalloc.c for xmalloc in /home/exposi_p/Dev/C/minishell1getit/src
+**
+** Made by exposi_p
+** Login   <exposi_p@epitech.net>
+**
+** Started on  Sat Mar  8 13:33:14 2014 exposi_p
+** Last update Wed Mar 12 23:20:16 2014 exposi_p
+*/
+
+#include	<stdlib.h>
+#include	<unistd.h>
+#include	"../inc/rtv1.h"
+
+void		*xmalloc(int size)
+{
+  void		*tab;
+
+  tab = malloc(size);
+  if (tab == NULL)
+    {
+      write(2, "Error : malloc\n", 15);
+      exit (-1);
+    }
+  return (tab);
+}
